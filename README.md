@@ -6,7 +6,35 @@
 
 ## 1.Git 常用命令总结
 
+(1) git clone   从远程主机克隆一个版本库
 
+```shell
+ git clone https://github.com/jianghui-galaxy/GitHub-Skills.git     #把远程项目克隆到本地主机当前路径，项目目录名称不变，会自动创建目录，如果已经存在会报错
+ 
+ git clone https://github.com/jianghui-galaxy/GitHub-Skills.git  MyLocalPath   #把远程项目克隆到本地主机当前路径，项目名称命名为MyLocalPath，会自动创建目录，如果已经存在会报错
+ 
+ git clone GitHub-Skills/  /tmp/Git  ##本地克隆到本地
+ 
+ git clone git@github.com:jianghui-galaxy/GitHub-Skills.git   ##以ssh协议克隆
+ 
+ 
+```
+
+
+
+(1) git remote
+
+
+
+(1) git clone
+
+
+
+(1) git clone
+
+
+
+(1) git clone
 
 
 
