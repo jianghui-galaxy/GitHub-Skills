@@ -39,11 +39,13 @@
 如果是ssh，结果：
 
 `origin	git@github.com:jianghui-galaxy/GitHub-Skills.git (fetch)`
+
 `origin	git@github.com:jianghui-galaxy/GitHub-Skills.git (push)`
 
 如果是https，结果：
 
 `origin	https://github.com/jianghui-galaxy/GitHub-Skills.git (fetch)`
+
 `origin	https://github.com/jianghui-galaxy/GitHub-Skills.git (push)`
 
 
