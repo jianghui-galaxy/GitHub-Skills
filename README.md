@@ -130,11 +130,30 @@ PDF： https://github.com/progit/progit2-zh/releases/download/2.1.8/progit_v2.1.
 
 ​	
 
-(2)
+(2) 廖雪峰的Git教程：https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
 
 
 
-## 4.Github 中 MarkDown语法
+## 4.初次运行Git配置
+
+
+
+查看配置 `git config --list`
+
+```
+git config --global user.name "Jianghui"				  ##提交用户
+git config --global user.email "jianghui_galaxy@163.com"    ##提交用户邮箱
+
+git config --global core.editor vim            ##默认使用的文本编辑器
+git config --global merge.tool vimdiff         ##解决合并冲突时使用哪种差异分析工具
+
+```
+
+以上配置也可以手动修改：`vim ~/.gitconfig`
+
+
+
+## 5.Github 中 MarkDown语法
 
  
 
