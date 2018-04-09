@@ -56,6 +56,8 @@
 
 `ssh-keygen -t rsa -f ~/.ssh/github -C jianghui_galaxy@163.com` （输入三次回车）
 
+将用户的使用的私钥添加到由`ssh-agent` 维护的列表中，（`ssh-agent` 是用于管理[SSH](https://kb.iu.edu/d/aelc) private keys的, 长时间持续运行的守护进程（daemon）. 唯一目的就是对解密的私钥进行高速缓存）
+
 `ssh-add   ~/.ssh/github`
 
 
