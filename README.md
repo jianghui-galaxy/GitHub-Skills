@@ -116,6 +116,7 @@
 通常设置全局提交时使用的用户和邮箱
 
 `git config --global user.name "jianghui_galaxy@163.com"				  ##提交用户`
+
 `git config --global user.email "jianghui_galaxy@163.com"    ##提交用户邮箱`
 
 如果只是设置某个特定的项目提交时使用的用户和邮箱，先 cd 到项目然后
