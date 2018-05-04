@@ -160,13 +160,16 @@ PDF： https://github.com/progit/progit2-zh/releases/download/2.1.8/progit_v2.1.
 
 查看配置 `git config --list`
 
-```
+```shell
 git config --global user.name "jianghui_galaxy@163.com"				  ##提交用户
 git config --global user.email "jianghui_galaxy@163.com"    ##提交用户邮箱
 
 git config --global core.editor vim            ##默认使用的文本编辑器
 git config --global merge.tool vimdiff         ##解决合并冲突时使用哪种差异分析工具
 
+
+##git config --system
+##git config --local
 ```
 
 以上配置也可以手动修改：`vim ~/.gitconfig`
