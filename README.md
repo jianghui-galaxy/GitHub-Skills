@@ -41,6 +41,7 @@
 > `ssh -T git@github.com`
 >
 > `git config --global user.name "jianghui_galaxy@163.com"`
+>
 > `git config --global user.email "jianghui_galaxy@163.com"`  
 >
 > `git add .`
