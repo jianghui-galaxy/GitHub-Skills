@@ -40,7 +40,8 @@
 >
 > `ssh -T git@github.com`
 >
-> 
+> `git config --global user.name "jianghui_galaxy@163.com"`
+> `git config --global user.email "jianghui_galaxy@163.com"`  
 >
 > `git add .`
 >
@@ -110,7 +111,24 @@
 
 
 
-(5) 提交试试是否需要用户名和密码
+(5) 设置提交时使用的用户和邮箱
+
+通常设置全局提交时使用的用户和邮箱
+
+`git config --global user.name "jianghui_galaxy@163.com"				  ##提交用户`
+`git config --global user.email "jianghui_galaxy@163.com"    ##提交用户邮箱`
+
+如果只是设置某个特定的项目提交时使用的用户和邮箱，先 cd 到项目然后
+
+`git config --local user.email "jianghui_galaxy@163.com"`
+
+`git config --local user.name "jianghui_galaxy@163.com"`
+
+当然还有  `git config --system ...`
+
+
+
+(6) 提交试试是否需要用户名和密码
 
 `git add .`
 
@@ -143,7 +161,7 @@ PDF： https://github.com/progit/progit2-zh/releases/download/2.1.8/progit_v2.1.
 查看配置 `git config --list`
 
 ```
-git config --global user.name "Jianghui"				  ##提交用户
+git config --global user.name "jianghui_galaxy@163.com"				  ##提交用户
 git config --global user.email "jianghui_galaxy@163.com"    ##提交用户邮箱
 
 git config --global core.editor vim            ##默认使用的文本编辑器
