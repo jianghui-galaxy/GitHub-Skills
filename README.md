@@ -114,19 +114,19 @@
 
 (5) 设置提交时使用的用户和邮箱
 
-通常设置全局提交时使用的用户和邮箱
+通常设置全局提交时使用的用户和邮箱（对应配置文件~/.gitconfig）
 
 `git config --global user.name "jianghui_galaxy@163.com"				  ##提交用户`
 
 `git config --global user.email "jianghui_galaxy@163.com"    ##提交用户邮箱`
 
-如果只是设置某个特定的项目提交时使用的用户和邮箱，先 cd 到项目然后
+如果只是设置某个特定的项目提交时使用的用户和邮箱，先 cd 到项目然后（对应配置文件.git/config）
 
 `git config --local user.email "jianghui_galaxy@163.com"`
 
 `git config --local user.name "jianghui_galaxy@163.com"`
 
-当然还有  `git config --system ...`
+当然还有  `git config --system ...` （对应配置文件/etc/gitconfig）
 
 
 
