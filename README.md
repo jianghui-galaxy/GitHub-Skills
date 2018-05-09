@@ -54,14 +54,15 @@
 
 具体步骤
 
-(1) 检查本地用户home目录下是否以Github的用户（注意：可能以PC主机用户生成过，但是不能用作Git）生成过ssh的key，如果有则直接下一步，如果没有则执行下面的命令，为了防止覆盖以前的`id_rsa、id_rsa.pub`，这里以 `-f` 选项指定在`~/.ssh` 目录下生成`github、github.pub`文件(私钥和公钥)：
+(1) 检查本地用户home目录下是否以Github的登录用户（注意：之前可能以其他用户生成过，但是不能用作Git）生成过ssh的key，如果有则直接下一步，如果没有则执行下面的命令，为了防止覆盖以前的`id_rsa、id_rsa.pub`，这里以 `-f` 选项指定在`~/.ssh` 目录下生成`github、github.pub`文件(私钥和公钥)：
 
 `ssh-keygen -t rsa -f ~/.ssh/github -C jianghui_galaxy@163.com` （输入三次回车）
 
 将用户的使用的私钥添加到由`ssh-agent` 维护的列表中，（`ssh-agent` 是用于管理[SSH](https://kb.iu.edu/d/aelc) private keys的, 长时间持续运行的守护进程（daemon）. 唯一目的就是对解密的私钥进行高速缓存）
 
-`ssh-add   ~/.ssh/github`
+`eval "$(ssh-agent -s)"`   //后台启动ssh-agent进程
 
+`ssh-add   ~/.ssh/github`  //添加私钥到ssh-agent
 
 
 (2) 把公钥 `github.pub` 文件的内容添加到 Github:  `点击头像 ---> Settings ---> SSH and GPG keys ---> New SSH key`, 写好Title，然后把上面生成的`github.pub`内容复制到Key下面的输入框中
