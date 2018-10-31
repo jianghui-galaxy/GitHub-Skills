@@ -12,6 +12,8 @@
 
 
 
+
+
 ## 1.Git 常用命令总结
 
  https://images2015.cnblogs.com/blog/710078/201609/710078-20160906110359098-1695380967.png
@@ -155,7 +157,79 @@ git config --global merge.tool vimdiff         ##解决合并冲突时使用哪�
 
 
 
-## 5.Github 中 MarkDown语法
+## 5.Github 空间限制
+
+https://help.github.com/articles/what-is-my-disk-quota/
+
+github文件空间没有限制.推荐1G以内.达到1G以后会受到GITHUB的通知邮件.上传超过50M的单个文件会warning.无法上传超过100M的单个文件.目前大文件会提供一个1G的免费GIT-LFS空间.
+
+
+
+## 6.配置Git提交时忽略指定文件
+
+git clone空项目后，在项目根目录下面新建`.gitignore`文件加入如下内容。
+
+.gitignore只能忽略那些原来没有被track的文件。如果这些类型文件在新建`.gitignore`文件之前就已经存在，那么它们可能已经被纳入了版本管理中，则修改.gitignore是无效的，要执行下面的命令把本地缓存删除（改变成未track状态），然后再提交，文件就不会上传到Git
+
+`git rm -r --cached .`
+`git add .`
+`git commit -m 'update .gitignore'`
+
+
+
+```
+##ignore this file##
+
+/target/ 
+.idea/
+.classpath
+.project
+.settings
+*.swp
+logs/
+.svn
+*.iml
+npm-debug.log
+      
+ ##filter databfile、sln file##
+*.mdb  
+*.ldb  
+*.sln    
+##class file##
+*.com  
+*.class  
+*.dll  
+*.exe  
+*.o  
+*.so  
+# compression file
+*.7z  
+*.dmg  
+*.gz  
+*.iso  
+*.jar  
+*.rar  
+*.tar  
+*.zip  
+*.via
+*.tmp
+*.err 
+# OS generated files #  
+.DS_Store  
+.DS_Store?  
+._*  
+.Spotlight-V100  
+.Trashes  
+Icon?  
+ehthumbs.db  
+Thumbs.db  
+```
+
+
+
+
+
+## 6.Github 中 MarkDown语法
 
  
 
