@@ -174,7 +174,9 @@ git clone空项目后，在项目根目录下面新建`.gitignore`文件加入�
 .gitignore只能忽略那些原来没有被track的文件。如果这些类型文件在新建`.gitignore`文件之前就已经存在，那么它们可能已经被纳入了版本管理中，则修改.gitignore是无效的，要执行下面的命令把本地缓存删除（改变成未track状态），然后再提交，文件就不会上传到Git
 
 `git rm -r --cached .`
+
 `git add .`
+
 `git commit -m 'update .gitignore'`
 
 
