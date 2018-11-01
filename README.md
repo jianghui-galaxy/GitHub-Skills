@@ -167,6 +167,8 @@ github文件空间没有限制.推荐1G以内.达到1G以后会受到GITHUB的�
 
 ## 6.配置Git提交时忽略指定文件
 
+参考https://www.cnblogs.com/youyoui/p/8337147.html
+
 git clone空项目后，在项目根目录下面新建`.gitignore`文件加入如下内容，提交时不会把下列类型的文件或者文件夹提交到Git上去。
 
 .gitignore只能忽略那些原来没有被track的文件。如果这些类型文件在新建`.gitignore`文件之前就已经存在，那么它们可能已经被纳入了版本管理中，则修改.gitignore是无效的，要执行下面的命令把本地缓存删除（改变成未track状态），然后再提交，文件就不会上传到Git
