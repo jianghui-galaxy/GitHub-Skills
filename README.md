@@ -167,7 +167,7 @@ github文件空间没有限制.推荐1G以内.达到1G以后会受到GITHUB的�
 
 ## 6.配置Git提交时忽略指定文件
 
-git clone空项目后，在项目根目录下面新建`.gitignore`文件加入如下内容。
+git clone空项目后，在项目根目录下面新建`.gitignore`文件加入如下内容，提交时不会把下列类型的文件或者文件夹提交到Git上去。
 
 .gitignore只能忽略那些原来没有被track的文件。如果这些类型文件在新建`.gitignore`文件之前就已经存在，那么它们可能已经被纳入了版本管理中，则修改.gitignore是无效的，要执行下面的命令把本地缓存删除（改变成未track状态），然后再提交，文件就不会上传到Git
 
@@ -178,43 +178,22 @@ git clone空项目后，在项目根目录下面新建`.gitignore`文件加入�
 
 
 ```
-##ignore this file##
+##.gitignore文件指定提交到Git时忽略掉的文件类型或者文件夹--Java版##
 
-/target/ 
-.idea/
-.classpath
-.project
-.settings
-*.swp
-logs/
-.svn
+##忽略Git的 .git文件夹
+.git/
+
+##忽略SVN的.svn文件夹
+.svn/
+
+##忽略IDEA的.idea文件夹和.iml文件
 *.iml
-npm-debug.log
-      
- ##filter databfile、sln file##
-*.mdb  
-*.ldb  
-*.sln    
-##class file##
-*.com  
-*.class  
-*.dll  
-*.exe  
-*.o  
-*.so  
-# compression file
-*.7z  
-*.dmg  
-*.gz  
-*.iso  
-*.jar  
-*.rar  
-*.tar  
-*.zip  
-*.via
-*.tmp
-*.err 
-# OS generated files #  
+.idea/
+
+##忽略VIM打开文件时的swap文件
+*.swp
+
+##忽略Mac OS中的某些文件
 .DS_Store  
 .DS_Store?  
 ._*  
@@ -223,6 +202,44 @@ npm-debug.log
 Icon?  
 ehthumbs.db  
 Thumbs.db  
+
+##忽略Java的.class文件和target文件夹
+.class
+target/
+
+#忽略所有的压缩文件jar
+*.jar 
+*.7z  
+*.dmg  
+*.gz  
+*.iso   
+*.rar  
+*.tar  
+*.zip  
+*.via
+*.tmp
+*.err 
+
+##忽略日志文件和文件夹
+*.log
+logs/
+
+ ##databfile、sln file
+*.mdb  
+*.ldb  
+*.sln   
+
+##其他
+*.com  
+*.dll  
+*.exe  
+*.o  
+*.so  
+.classpath
+.project
+.settings
+npm-debug.log
+
 ```
 
 
